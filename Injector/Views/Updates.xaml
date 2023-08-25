@@ -1,0 +1,23 @@
+﻿<Window x:Class="Injector.Views.Updates"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Injector.Views"
+        mc:Ignorable="d"
+        Title="Updates" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Background="{DynamicResource secondaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Margin="10,10,10,5" MaxWidth="500" CornerRadius="8" Background="{DynamicResource primaryBackground}">
+            <TextBlock Text="Для проверки обновлений нажмите на кнопку 'Проверить обновления'" TextWrapping="Wrap" MinHeight="20" FontSize="18" Foreground="{DynamicResource textColor}" Margin="5"/>
+        </Border>
+        <ProgressBar Grid.Row="1" MinHeight="40" Style="{DynamicResource progressBarStyle}" Margin="10,5,10,5" >
+            
+        </ProgressBar>
+        <Button Content="Проверить обновления" Grid.Row="2" Style="{DynamicResource otherButtons}" Margin="10,10,10,5" MaxWidth="200" MinHeight="24" FontSize="14"/>
+    </Grid>
+</Window>

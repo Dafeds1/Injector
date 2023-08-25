@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Injector.Views.AdditionallyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Injector.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Button Content="{DynamicResource m_calibrationsButton}" Style="{DynamicResource otherButtons}" Margin="5,10,5,5"/>
+            <Button Content="{DynamicResource m_reportErrorButton}" Style="{DynamicResource otherButtons}" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource m_updatesButton}" Style="{DynamicResource otherButtons}" Margin="5,5,5,10"/>
+        </StackPanel>
+        <ListBox Grid.Row="0" Grid.Column="1" Margin="10" ScrollViewer.CanContentScroll="True" BorderBrush="{DynamicResource primaryBackground}" Background="{DynamicResource thirdBackground}" Foreground="{DynamicResource textColor}"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+            <CheckBox Content="{DynamicResource m_timeText}" VerticalAlignment="Center" Foreground="{DynamicResource textColor}" Margin="20,0,0,0"/>
+            <Button Content="{DynamicResource m_saveButton}" VerticalAlignment="Center" MinHeight="22" MinWidth="100" Style="{DynamicResource otherButtons}" Margin="10,0,5,0" />
+            <Button Content="{DynamicResource m_clearButton}" VerticalAlignment="Center" MinHeight="22" MinWidth="100" Style="{DynamicResource otherButtons}" Margin="5,0,5,0"/>
+            <TextBox VerticalAlignment="Center" VerticalContentAlignment="Center" MinWidth="250" MinHeight="32" Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

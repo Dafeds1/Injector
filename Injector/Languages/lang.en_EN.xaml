@@ -1,0 +1,107 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!--#region navArea -->
+    <v:String x:Key="m_homeButton">Main</v:String>
+    <v:String x:Key="m_testingButton">Testing</v:String>
+    <v:String x:Key="m_cavitationButton">Cavitation</v:String>
+    <v:String x:Key="m_additionallyButton">Additionally</v:String>
+    <v:String x:Key="m_referenceButton">Reference</v:String>
+    <v:String x:Key="m_settingsButton">Settings</v:String>
+    <!--#endregion-->
+
+    <!--#region MainView -->
+    <v:String x:Key="m_portHeader">Port</v:String>
+    <v:String x:Key="m_stateHeader">Condition</v:String>
+    <v:String x:Key="m_stateText">N/D</v:String>
+    <v:String x:Key="m_autosearchButton">Auto search</v:String>
+    <v:String x:Key="m_checkButton">Check</v:String>
+    <v:String x:Key="m_openingTestButton">Opening Test</v:String>
+    <v:String x:Key="m_createReportButton">Create a report</v:String>
+    <v:String x:Key="m_nozzleHeader1">Nozzle 1</v:String>
+    <v:String x:Key="m_nozzleHeader2">Nozzle 2</v:String>
+    <v:String x:Key="m_nozzleHeader3">Nozzle 3</v:String>
+    <v:String x:Key="m_nozzleHeader4">Nozzle 4</v:String>
+    <v:String x:Key="m_nozzleHeader5">Nozzle 5</v:String>
+    <v:String x:Key="m_nozzleHeader6">Nozzle 6</v:String>
+
+    <!--#region MainView.DataTable-->
+    <v:String x:Key="m_injectorsHeader">Injectors</v:String>
+    <v:String x:Key="m_reactionHeader">Reaction</v:String>
+    <v:String x:Key="m_openningHeader">Opening time</v:String>
+    <v:String x:Key="m_saturationHeader">Saturation</v:String>
+    <v:String x:Key="m_deltaHeader">Мariance</v:String>
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region TestView-->
+    <v:String x:Key="m_airRemovalButton">Air removal</v:String>
+    <v:String x:Key="m_straitButton">Strait</v:String>
+    <v:String x:Key="m_speedTestButton">Speed test</v:String>
+    <v:String x:Key="m_pressueReliefButton">Pressure relief</v:String>
+    <v:String x:Key="m_accelerationBreakingButton">Acceleration-braking</v:String>
+    <v:String x:Key="m_leakTestButton">Leak test</v:String>
+    <v:String x:Key="m_reverseFlushingButton">Backwash</v:String>
+    <v:String x:Key="m_dynamicFlushingButton">Dynamic flushing</v:String>
+    <v:String x:Key="m_ultrasonicCleaningButton">Ultrasonic cleaning</v:String>
+    <v:String x:Key="m_stopButton">Stop</v:String>
+    <v:String x:Key="m_drainButton">Drain</v:String>
+
+    <v:String x:Key="m_timeOnPumpText">Pump on time, sec</v:String>
+    <v:String x:Key="m_timeOffPumpText">Pump off time, sec</v:String>
+    <v:String x:Key="m_pumpPowerText">Pump power, % -</v:String>
+    <v:String x:Key="m_openningImpulseText">Opening pulse, sec -</v:String>
+    <v:String x:Key="m_retentionFrequencyText">Holding frequency, Hz -</v:String>
+    <v:String x:Key="m_engineSpeedText">Engine speed, rpm -</v:String>
+    <v:String x:Key="m_boreholeText">Borehole, % -</v:String>
+    <v:String x:Key="m_retentionDurationText">Duration of holding, msec -</v:String>
+    <v:String x:Key="m_workTime">Working time, sec -</v:String>
+
+    <v:String x:Key="m_pumpText">Pump</v:String>
+    <v:String x:Key="m_drainText">Drain</v:String>
+    <v:String x:Key="m_voltageText">Power, V</v:String>
+    <!--#endregion-->
+
+    <!--#region CavitationView -->
+    <v:String x:Key="m_frequencyHeader">Frequency</v:String>
+    <v:String x:Key="m_boreholeHeader">Borehole</v:String>
+    <v:String x:Key="m_dataSaveButton">Save Data</v:String>
+    <v:String x:Key="m_valueAddButton">Add Values</v:String>
+    <v:String x:Key="m_cavitationFreqencyText">Cavitation frequency, Hz -</v:String>
+    <v:String x:Key="m_cavitationBoreholeText">Cavitation borehole, % -</v:String>
+    <v:String x:Key="m_refreshButton">Refresh</v:String>
+    <v:String x:Key="m_testButton">Test</v:String>
+    <!--#endregion-->
+
+    <!--#region AdditionallyView -->
+    <v:String x:Key="m_calibrationsButton">Calibrate controller</v:String>
+    <v:String x:Key="m_reportErrorButton">Report an error</v:String>
+    <v:String x:Key="m_updatesButton">Updates</v:String>
+    <v:String x:Key="m_clearButton">Clear</v:String>
+    <v:String x:Key="m_saveButton">Save</v:String>
+    <v:String x:Key="m_timeText">Time</v:String>
+    <!--#endregion-->
+
+    <!--#region SettingsView -->
+    <v:String x:Key="m_selecrLanguageHeader">Language selection</v:String>
+    <v:String x:Key="m_languageText">Language</v:String>
+    <v:String x:Key="m_themeHeader">Theme selection</v:String>
+    <v:String x:Key="m_themeText">Theme</v:String>
+    <v:String x:Key="m_showNewsHeader">News display</v:String>
+    <v:String x:Key="m_showNewsButton">Show news</v:String>
+    <v:String x:Key="m_savingPathHeader">Path to save logs</v:String>
+    <v:String x:Key="m_browseButton">Browse</v:String>
+    <v:String x:Key="m_directoryHeader">Location of logs</v:String>
+    <v:String x:Key="m_folderOpenButton">Open folder</v:String>
+    <!--#endregion-->
+
+    <v:String x:Key="m_lightTheme">Ligth Theme</v:String>
+    <v:String x:Key="m_darkTheme">Dark Theme</v:String>
+    <v:String x:Key="m_yellowTheme">Yellow Theme</v:String>
+    <v:String x:Key="m_ruLang">Russian</v:String>
+    <v:String x:Key="m_enLang">English</v:String>
+    <v:String x:Key="m_kzLang">Kazakh</v:String>
+    <v:String x:Key="m_swVersion">Software version:</v:String>
+    <v:String x:Key="m_fwVersion">Firmware version:</v:String>
+</ResourceDictionary>

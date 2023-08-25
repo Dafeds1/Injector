@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="Injector.Views.CavitationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Injector.Views"
+             xmlns:vm="clr-namespace:Injector.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:CavitationViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="80"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="{DynamicResource m_injectorsHeader}" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="{DynamicResource m_frequencyHeader}" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="{DynamicResource m_boreholeHeader}" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="1" Content="1" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="2" Content="2" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="3" Content="3" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="4" Content="4" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="5" Content="5" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="0" Grid.Column="6" Content="6" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource headerCellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="2" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="3" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="4" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="5" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="1" Grid.Column="6" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="1" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="2" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="3" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="4" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="5" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+                <Label Grid.Row="2" Grid.Column="6" Content="0" Foreground="{DynamicResource textColor}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{DynamicResource cellBackground}"/>
+            </Grid>
+            <Button Content="{DynamicResource m_dataSaveButton}"  Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Style="{DynamicResource otherButtons}" Margin="10,0,10,0"/>
+            <Button Content="{DynamicResource m_valueAddButton}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Style="{DynamicResource otherButtons}" Margin="10,0,10,0"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="5,10,5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="0" Source="{Binding CurrentModelBase.InteractiveNozzle[0]}"></Image>
+            <Image Grid.Column="1" Source="{Binding CurrentModelBase.InteractiveNozzle[1]}"></Image>
+            <Image Grid.Column="2" Source="{Binding CurrentModelBase.InteractiveNozzle[2]}"></Image>
+            <Image Grid.Column="3" Source="{Binding CurrentModelBase.InteractiveNozzle[3]}"></Image>
+            <Image Grid.Column="4" Source="{Binding CurrentModelBase.InteractiveNozzle[4]}"></Image>
+            <Image Grid.Column="5" Source="{Binding CurrentModelBase.InteractiveNozzle[5]}"></Image>
+            <Button Content="{DynamicResource m_refreshButton}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" MinHeight="24" Style="{DynamicResource otherButtons}" Margin="10,0,10,0"/>
+            <Button Content="{DynamicResource m_referenceButton}" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" MinHeight="24" Style="{DynamicResource otherButtons}" Margin="10,0,10,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="0" Margin="5">
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Content="{DynamicResource m_cavitationFreqencyText}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Foreground="{DynamicResource textColor}"/>
+                    <Label Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Foreground="{DynamicResource textColor}"/>
+                </StackPanel>
+                <Slider Margin="10,20,10,0" MinHeight="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Margin="5">
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                    <Label Content="{DynamicResource m_cavitationBoreholeText}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Foreground="{DynamicResource textColor}"/>
+                    <Label Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Foreground="{DynamicResource textColor}"/>
+                </StackPanel>
+                <Slider Margin="10,20,10,0" MinHeight="32" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>    
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="40"/>
+                <RowDefinition Height="Auto" MinHeight="24"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{DynamicResource progressBarStyle}" MinHeight="32" Margin="10,40,10,0" VerticalAlignment="Center"/>
+            <Button Grid.Row="1" Grid.Column="0" Content="{DynamicResource m_testButton}" Style="{DynamicResource otherButtons}" MinWidth="80" Margin="3,15,3,0" MinHeight="24"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="{DynamicResource m_stopButton}" Style="{DynamicResource otherButtons}" MinWidth="80" Margin="3,15,3,0" MinHeight="24"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="{DynamicResource m_cavitationButton}" Style="{DynamicResource otherButtons}" MinWidth="80" Margin="3,15,3,0" MinHeight="24"/>
+        </Grid>
+    </Grid>
+</UserControl>

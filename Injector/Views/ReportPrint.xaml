@@ -1,0 +1,107 @@
+﻿<Window x:Class="Injector.Views.ReportPrint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ScottPlot="clr-namespace:ScottPlot;assembly=ScottPlot.WPF"
+        xmlns:local="clr-namespace:Injector.Views"
+        mc:Ignorable="d"
+        Title="ReportPrint" Height="768" Width="1280">
+    <Grid Background="{DynamicResource secondaryBackground}">
+        <Canvas x:Name="Info">
+            <StackPanel Orientation="Vertical" MinWidth="300" Height="722" Canvas.Left="100" Canvas.Top="20">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="ФИО заказчика:" Canvas.Left="100" Canvas.Top="30" FontSize="16" FontFamily="Times New Roman"/>
+                    <TextBox x:Name="InputField_Name1" Text="поле ввода..." VerticalContentAlignment="Center" FontFamily="Verdana"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <Label Content="ФИО исполнителя:" Canvas.Left="100" Canvas.Top="80" FontSize="16" FontFamily="Times New Roman"/>
+                    <TextBox x:Name="InputField_Name2" Text="поле ввода..." VerticalContentAlignment="Center" FontFamily="Verdana"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0,20,0,0">
+                    <Label Content="Результаты тестирования:" Canvas.Left="100" Canvas.Top="340" FontSize="16" FontFamily="Times New Roman" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBox x:Name="ResultTesting" Text="поле ввода..." VerticalContentAlignment="Center" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                </StackPanel>
+                <Grid x:Name="TableValues" ShowGridLines="True" Background="White" Canvas.Top="130" Canvas.Left="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,50,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Форсунки" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="1" Grid.Row="0" Content="1" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="2" Grid.Row="0" Content="2" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="18"/>
+                    <Label Grid.Column="3" Grid.Row="0" Content="3" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="4" Grid.Row="0" Content="4" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="5" Grid.Row="0" Content="5" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="6" Grid.Row="0" Content="6" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Сопротивление" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Реакция" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="0" Grid.Row="3" Content="Открытие" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="0" Grid.Row="4" Content="Насыщение" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label Grid.Column="0" Grid.Row="5" Content="Отклонение" Padding="5,5,5,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD8D8D8" FontSize="16"/>
+                    <Label x:Name="ReportResistance1" Grid.Column="1" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[0]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="ReportResistance2" Grid.Column="2" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[1]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="ReportResistance3" Grid.Column="3" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[2]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="ReportResistance4" Grid.Column="4" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="ReportResistance5" Grid.Column="5" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="ReportResistance6" Grid.Column="6" Grid.Row="1" Content="{Binding SelectedModel.NozzlesResistance[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction1" Grid.Column="1" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[0]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction2" Grid.Column="2" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[1]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction3" Grid.Column="3" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[2]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction4" Grid.Column="4" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction5" Grid.Column="5" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageReaction6" Grid.Column="6" Grid.Row="2" Content="{Binding SelectedModel.AverageReaction[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning1" Grid.Column="1" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[0]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning2" Grid.Column="2" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[1]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning3" Grid.Column="3" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[2]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning4" Grid.Column="4" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning5" Grid.Column="5" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AveragOpenning6" Grid.Column="6" Grid.Row="3" Content="{Binding SelectedModel.AverageOpenning[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation1" Grid.Column="1" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[0]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation2" Grid.Column="2" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[1]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation3" Grid.Column="3" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[2]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation4" Grid.Column="4" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation5" Grid.Column="5" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="AverageSaturation6" Grid.Column="6" Grid.Row="4" Content="{Binding SelectedModel.AverageSaturation[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta1" Grid.Column="1" Grid.Row="5" Content="{Binding SelectedModel.Delta[0]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta2" Grid.Column="2" Grid.Row="5" Content="{Binding SelectedModel.Delta[1]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta3" Grid.Column="3" Grid.Row="5" Content="{Binding SelectedModel.Delta[2]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta4" Grid.Column="4" Grid.Row="5" Content="{Binding SelectedModel.Delta[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta5" Grid.Column="5" Grid.Row="5" Content="{Binding SelectedModel.Delta[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                    <Label x:Name="Delta6" Grid.Column="6" Grid.Row="5" Content="{Binding SelectedModel.Delta[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFF1F1F1" FontSize="14"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Canvas.Left="100" Canvas.Top="700">
+                <Label Content="Подпись:" Canvas.Left="100" Canvas.Top="680" FontSize="16" FontFamily="Verdana"/>
+                <Label Content="Дата:" Canvas.Left="340" Canvas.Top="680" FontSize="16" FontFamily="Verdana" Margin="120,0,0,0"/>
+                <Label Content="{Binding SelectedModel.NowDate}" Canvas.Left="340" Canvas.Top="680" FontSize="16" FontFamily="Verdana" Margin="10,0,0,0"/>
+            </StackPanel>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="580" Canvas.Top="45" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="890" Canvas.Top="45" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="580" Canvas.Top="285" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="890" Canvas.Top="285" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="580" Canvas.Top="525" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <ScottPlot:WpfPlot Width="290" Height="180" Canvas.Left="890" Canvas.Top="525" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Label Content="Форсунка 1" Canvas.Left="701" Canvas.Top="10" FontFamily="Verdana" FontSize="14" Padding="2,2,2,2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Форсунка 2" Canvas.Left="1011" Canvas.Top="10" FontFamily="Verdana" FontSize="14" Padding="2,2,2,2"/>
+            <Label Content="Форсунка 3" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="701" Canvas.Top="250" Padding="2,2,2,2" FontFamily="Verdana" FontSize="14"/>
+            <Label Content="Форсунка 4" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="2,2,2,2" FontFamily="Verdana" FontSize="14" Canvas.Left="1011" Canvas.Top="250"/>
+            <Label Content="Форсунка 5" Canvas.Left="701" Canvas.Top="490" Padding="2,2,2,2" FontFamily="Verdana" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Форсунка 6" Padding="2,2,2,2" FontFamily="Verdana" FontSize="14" Canvas.Left="1011" Canvas.Top="490" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+        <Button x:Name="Printing" Content="Печатать" Style="{DynamicResource otherButtons}" HorizontalAlignment="Left" FontSize="14" Padding="2,2,2,2" VerticalAlignment="Bottom" Margin="100,0,0,100"/>
+    </Grid>
+</Window>
