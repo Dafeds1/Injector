@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="Inj"
                     xmlns:v="clr-namespace:System;assembly=mscorlib">
     <!--#region navArea -->
     <v:String x:Key="m_homeButton">Главная</v:String>
@@ -7,7 +8,26 @@
     <v:String x:Key="m_cavitationButton">Кавитация</v:String>
     <v:String x:Key="m_additionallyButton">Дополнительно</v:String>
     <v:String x:Key="m_referenceButton">Справка</v:String>
+    <v:String x:Key="m_databaseButton">База данных</v:String>
+    <v:String x:Key="m_autoDiagnosticButton">Автодиагностика</v:String>
     <v:String x:Key="m_settingsButton">Настройки</v:String>
+    <!--#endregion-->
+    
+    <!--#region Captions -->
+    <v:String x:Key="m_homeCaption">Главная</v:String>
+    <v:String x:Key="m_testingCaption">Тестирование</v:String>
+    <v:String x:Key="m_cavitationCaption">Кавитация</v:String>
+    <v:String x:Key="m_additionallyCaption">Дополнительно</v:String>
+    <v:String x:Key="m_referenceCaption">Справка</v:String>
+    <v:String x:Key="m_databaseCaption">База данных</v:String>
+    <v:String x:Key="m_autoDiagnosticCaption">Автодиагностика</v:String>
+    <v:String x:Key="m_settingsCaption">Настройки</v:String>
+    <v:String x:Key="m_calibrateCaption">Калибровка</v:String>
+    <v:String x:Key="m_updatesCaption">Обновления</v:String>
+    <v:String x:Key="m_activateLicenseCaption">Активация лицензии</v:String>
+    <v:String x:Key="m_buyLicenseCaption">Покупка лицензии</v:String>
+    <v:String x:Key="m_registerDeviceCaption">Регистрация прибора</v:String>
+    
     <!--#endregion-->
     
     <!--#region MainView -->
@@ -95,8 +115,9 @@
     <v:String x:Key="m_directoryHeader">Расположение log`ов</v:String>
     <v:String x:Key="m_folderOpenButton">Открыть папку</v:String>
     <!--#endregion-->
+    
     <!--#region Updates -->
-    <v:String x:Key="m_mainText">Для проверки обновлений нажмите на кнопку "Проверить обновленияЭ" </v:String>
+    <v:String x:Key="m_mainText">Для проверки обновлений нажмите на кнопку "Проверить обновления" </v:String>
     <v:String x:Key="m_checkingText">Проверка актуальных обновлений</v:String>
     <v:String x:Key="m_loadingText">Загрузка программного обеспечения, пожалуйста, подождите </v:String>
     <v:String x:Key="m_doneText">Прошивка контроллера прошла успешно</v:String>
@@ -115,9 +136,10 @@
     <!--#region Calibration -->
     <v:String x:Key="m_calibrationDescText">Для правильной калибровки измерьте напряжение источника питания контроллера и укажите его в вольтах(12.4/ 12.52) в соответствующем поле. Также замкните выход первой форсунки(обозначена чёрной термоусадкой или маркером) и нажмите на кнопку "Калибровать"</v:String>
     <v:String x:Key="m_calibrateButton">Калибровать</v:String>
+    <v:String x:Key="m_calibrateText">Напряжение, В</v:String>
     <!--#endregion-->
-    <!--#region News -->
     
+    <!--#region News -->
     <v:String x:Key="m_firstHeader">Окна программы</v:String>
     <v:String x:Key="m_windowsDesc">В программе есть 4 окна: главное, окно калибровки, окно обновления программы и прошивки, окно отчёта работы с форсунками</v:String>
     <v:String x:Key="m_mainWindowText">Основное окно.</v:String>
@@ -204,7 +226,23 @@
     <v:String x:Key="m_ruLang">Русский</v:String> 
     <v:String x:Key="m_enLang">English</v:String>
     <v:String x:Key="m_kzLang">Казахский</v:String>
-    <v:String x:Key="m_swVersion">Версия ПО</v:String>
-    <v:String x:Key="m_fwVersion">Версия прошивки</v:String>
+    <v:String x:Key="m_swVersion">Версия ПО: </v:String>
+    <v:String x:Key="m_fwVersion">Версия прошивки: </v:String>
+    <!--#endregion-->
+
+    <!--#region pressingResult -->
+    <v:String x:Key="yesButton">Да</v:String>
+    <v:String x:Key="noButton">Нет</v:String>
+    <v:String x:Key="okButton">Ок</v:String>
+    <v:String x:Key="cancelButton">Отмена</v:String>
+    <!--#endregion-->
+
+    <!--#region LicenseActivation -->
+    <v:String x:Key="m_FIOText">Укажите Ваши ФИО</v:String>
+    <v:String x:Key="m_emailText">Введите Ваш Email</v:String>
+    <v:String x:Key="m_phoneText">Введите Ваш номер телефона</v:String>
+    <v:String x:Key="m_snText">Введите серийный номер лицензии</v:String>
+    <v:String x:Key="m_registerLicenseButton">Зарегистрировать лицензию</v:String>
+    <v:String x:Key="m_checkLicenseButton">Проверить лицензию</v:String>
     <!--#endregion-->
 </ResourceDictionary>

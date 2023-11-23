@@ -11,7 +11,7 @@ namespace Injector
 {
     public class AppTheme
     {
-        private enum m_themes{
+        private enum Themes{
             LightTheme,
             DarkTheme,
             YellowTheme
@@ -26,13 +26,13 @@ namespace Injector
             switch (index)
             {
                 case 0:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(m_themes)index}.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(Themes)index}.xaml", UriKind.Relative) });
                     break;
                 case 1:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(m_themes)index}.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(Themes)index}.xaml", UriKind.Relative) });
                     break;
                 case 2:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(m_themes)index}.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri($"Themes/{(Themes)index}.xaml", UriKind.Relative) });
                     break;
             }
 

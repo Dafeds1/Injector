@@ -1,0 +1,219 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!--#region navArea -->
+    <v:String x:Key="m_homeButton">Main</v:String>
+    <v:String x:Key="m_testingButton">Testing</v:String>
+    <v:String x:Key="m_cavitationButton">Cavitation</v:String>
+    <v:String x:Key="m_additionallyButton">Additionally</v:String>
+    <v:String x:Key="m_referenceButton">Reference</v:String>
+    <v:String x:Key="m_settingsButton">Settings</v:String>
+    <!--#endregion-->
+
+    <!--#region MainView -->
+    <v:String x:Key="m_portHeader">Port</v:String>
+    <v:String x:Key="m_stateHeader">Condition</v:String>
+    <v:String x:Key="m_stateText">N/D</v:String>
+    <v:String x:Key="m_autosearchButton">Auto search</v:String>
+    <v:String x:Key="m_checkButton">Check</v:String>
+    <v:String x:Key="m_openingTestButton">Opening Test</v:String>
+    <v:String x:Key="m_createReportButton">Create a report</v:String>
+    <v:String x:Key="m_nozzleHeader1">Nozzle 1</v:String>
+    <v:String x:Key="m_nozzleHeader2">Nozzle 2</v:String>
+    <v:String x:Key="m_nozzleHeader3">Nozzle 3</v:String>
+    <v:String x:Key="m_nozzleHeader4">Nozzle 4</v:String>
+    <v:String x:Key="m_nozzleHeader5">Nozzle 5</v:String>
+    <v:String x:Key="m_nozzleHeader6">Nozzle 6</v:String>
+
+    <!--#region MainView.DataTable-->
+    <v:String x:Key="m_injectorsHeader">Injectors</v:String>
+    <v:String x:Key="m_reactionHeader">Reaction</v:String>
+    <v:String x:Key="m_openningHeader">Opening time</v:String>
+    <v:String x:Key="m_saturationHeader">Saturation</v:String>
+    <v:String x:Key="m_deltaHeader">Мariance</v:String>
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region TestView-->
+    <v:String x:Key="m_airRemovalButton">Air removal</v:String>
+    <v:String x:Key="m_straitButton">Strait</v:String>
+    <v:String x:Key="m_speedTestButton">Speed test</v:String>
+    <v:String x:Key="m_pressueReliefButton">Pressure relief</v:String>
+    <v:String x:Key="m_accelerationBreakingButton">Acceleration-braking</v:String>
+    <v:String x:Key="m_leakTestButton">Leak test</v:String>
+    <v:String x:Key="m_reverseFlushingButton">Backwash</v:String>
+    <v:String x:Key="m_dynamicFlushingButton">Dynamic flushing</v:String>
+    <v:String x:Key="m_ultrasonicCleaningButton">Ultrasonic cleaning</v:String>
+    <v:String x:Key="m_stopButton">Stop</v:String>
+    <v:String x:Key="m_drainButton">Drain</v:String>
+
+    <v:String x:Key="m_timeOnPumpText">Pump on time, sec</v:String>
+    <v:String x:Key="m_timeOffPumpText">Pump off time, sec</v:String>
+    <v:String x:Key="m_pumpPowerText">Pump power, % -</v:String>
+    <v:String x:Key="m_openningImpulseText">Opening pulse, sec -</v:String>
+    <v:String x:Key="m_retentionFrequencyText">Holding frequency, Hz -</v:String>
+    <v:String x:Key="m_engineSpeedText">Engine speed, rpm -</v:String>
+    <v:String x:Key="m_boreholeText">Borehole, % -</v:String>
+    <v:String x:Key="m_retentionDurationText">Duration of holding, msec -</v:String>
+    <v:String x:Key="m_workTime">Working time, sec -</v:String>
+
+    <v:String x:Key="m_pumpText">Pump</v:String>
+    <v:String x:Key="m_drainText">Drain</v:String>
+    <v:String x:Key="m_voltageText">Power, V</v:String>
+    <!--#endregion-->
+
+    <!--#region CavitationView -->
+    <v:String x:Key="m_frequencyHeader">Frequency</v:String>
+    <v:String x:Key="m_boreholeHeader">Borehole</v:String>
+    <v:String x:Key="m_dataSaveButton">Save Data</v:String>
+    <v:String x:Key="m_valueAddButton">Add Values</v:String>
+    <v:String x:Key="m_cavitationFreqencyText">Cavitation frequency, Hz -</v:String>
+    <v:String x:Key="m_cavitationBoreholeText">Cavitation borehole, % -</v:String>
+    <v:String x:Key="m_refreshButton">Refresh</v:String>
+    <v:String x:Key="m_testButton">Test</v:String>
+    <!--#endregion-->
+
+    <!--#region AdditionallyView -->
+    <v:String x:Key="m_calibrationsButton">Calibrate controller</v:String>
+    <v:String x:Key="m_reportErrorButton">Report an error</v:String>
+    <v:String x:Key="m_updatesButton">Updates</v:String>
+    <v:String x:Key="m_clearButton">Clear</v:String>
+    <v:String x:Key="m_saveButton">Save</v:String>
+    <v:String x:Key="m_timeText">Time</v:String>
+    <!--#endregion-->
+
+    <!--#region SettingsView -->
+    <v:String x:Key="m_selecrLanguageHeader">Language selection</v:String>
+    <v:String x:Key="m_languageText">Language</v:String>
+    <v:String x:Key="m_themeHeader">Theme selection</v:String>
+    <v:String x:Key="m_themeText">Theme</v:String>
+    <v:String x:Key="m_showNewsHeader">News display</v:String>
+    <v:String x:Key="m_showNewsButton">Show news</v:String>
+    <v:String x:Key="m_savingPathHeader">Path to save logs</v:String>
+    <v:String x:Key="m_browseButton">Browse</v:String>
+    <v:String x:Key="m_directoryHeader">Location of logs</v:String>
+    <v:String x:Key="m_folderOpenButton">Open folder</v:String>
+    <!--#endregion-->
+
+    <!--#region Updates -->
+    <v:String x:Key="m_mainText">Для проверки обновлений нажмите на кнопку "Проверить обновленияЭ"</v:String>
+    <v:String x:Key="m_checkingText">Проверка актуальных обновлений</v:String>
+    <v:String x:Key="m_loadingText">Загрузка программного обеспечения, пожалуйста, подождите</v:String>
+    <v:String x:Key="m_doneText">Прошивка контроллера прошла успешно</v:String>
+    <v:String x:Key="m_errorText">Ошибка записи блока -</v:String>
+    <v:String x:Key="m_checkUpdatesButton">Проверить обновления</v:String>
+    <!--#endregion-->
+
+    <!--#region SavingNozzleData -->
+    <v:String x:Key="m_brandHeader">Марка</v:String>
+    <v:String x:Key="m_nozzleTypeHeader">Тип форсунки</v:String>
+    <v:String x:Key="m_engineModelHeader">Модель двигателя</v:String>
+    <v:String x:Key="m_resistanceHeader">Сопротивлени</v:String>
+    <v:String x:Key="m_noteHeader">Примечание</v:String>
+    <!--#endregion-->
+
+    <!--#region Calibration -->
+    <v:String x:Key="m_calibrationDescText">Для правильной калибровки измерьте напряжение источника питания контроллера и укажите его в вольтах(12.4/ 12.52) в соответствующем поле. 
+    Также замкните выход первой форсунки(обозначена чёрной термоусадкой или маркером) и нажмите на кнопку "Калибровать" (83)</v:String>
+    <v:String x:Key="m_calibrateButton">Калибровать (84)</v:String>
+    <!--#endregion-->
+
+    <!--#region News -->
+    <v:String x:Key="m_firstHeader">Окна программы</v:String>
+    <v:String x:Key="m_windowsDesc">В программе есть 4 окна: главное, окно калибровки, окно обновления программы и прошивки, окно отчёта работы с форсунками</v:String>
+    <v:String x:Key="m_mainWindowText">Основное окно.</v:String>
+    <v:String x:Key="m_calibrateWindowText">Окно калибровки контроллера.</v:String>
+    <v:String x:Key="m_updatesWindowText">Окно обновления программного обеспечения и прошивки контроллера</v:String>
+    <v:String x:Key="m_reportWindowText">Окно отчёта работы форсунок</v:String>
+    <v:String x:Key="m_secondaryWindowsDesc">Так же есть дополнительные окна: окно с новостями, окно с информацией о сохранённых форсунках, окно для сохранение данных форсунок</v:String>
+    <v:String x:Key="m_newsWindowText">Окно с новостями</v:String>
+    <v:String x:Key="m_savedDataWindowText">Окно для просмотра информации о сохранённых форсунках</v:String>
+    <v:String x:Key="m_saveDataWindowText">Окно для сохранения данных о форсунках</v:String>
+
+    <v:String x:Key="m_secondHeader">Вкладки программы</v:String>
+    <v:String x:Key="m_tabsDesc">Слева находится 6 вкладок: Главная, Тестирование, Кавитация, Дополнительно, Справка, Настройки</v:String>
+    <v:String x:Key="m_mainTabText">Вкладка "Главная"</v:String>
+    <v:String x:Key="m_testingTabText">Вкладка "Тестирование"</v:String>
+    <v:String x:Key="m_cavitationTabText">Вкладка "Кавитация"</v:String>
+    <v:String x:Key="m_additionallyTabText">Вкладка "Дополнительно"</v:String>
+    <v:String x:Key="m_referenceTabText">Вкладка "Справка"</v:String>
+    <v:String x:Key="m_settingsTabText">Вкладка "Настройки"</v:String>
+
+    <v:String x:Key="m_thirdHeader">Описание режимов работы</v:String>
+    <v:String x:Key="m_airRemovelDesc">«Удаление воздуха» - функция кратковременно открывает форсунки импульсивно удаляя воздух с системы под давлением, создаваемым насосом.</v:String>
+    <v:String x:Key="m_straitDesc">«Пролив» - Все форсунки открываются одновременно под давлением, создаваемым насосом. Для контроля распыла и норм налива.</v:String>
+    <v:String x:Key="m_drainDesc">«Слив» - Функция открываетливные клапана для слива жидкости из колб (если клапана установлены)</v:String>
+    <v:String x:Key="m_engineSpeedDesc">«Тест на оборотах»- Даный режим позволяет задать стабильные обороты для проверки равномерности пролива форсунок и сравнения производительности форсунок на заданных оборотах.</v:String>
+    <v:String x:Key="m_pressureReliefDesc">«Сброс давления» - Функция открывает форсунки для удаления избыточного давления из системы. Насос не работает.</v:String>
+    <v:String x:Key="m_accelBrakingDesc">«Разгон-торможение» - Данный режим эмулирует изменение частоты вращения от 500 до 6000 оборотов. Режим настроек не имеет.</v:String>
+    <v:String x:Key="m_leakTestDesc">«Тест на герметичность» - Позволяет оценить герметичность форсунок под давлением.</v:String>
+    <v:String x:Key="m_reverseFlushingDesc">«Обатная промывка» - Функция предназначенная для промывки форсунок(непосредственного впрыска), установленных в обратном направлении. В этом режиме автоматически изменяются длительность впрыска и открывающий импульс, оптимальным для этого режима способом.</v:String>
+    <v:String x:Key="m_usCleaningDesc">«УЗ очистка» - Функция предназначенная для промывки форсунок(непосредственного впрыска), установленных в обратном направлении. В этом режиме автоматически изменяются длительность впрыска и открывающий импульс, оптимальным для этого режима способом.</v:String>
+    <v:String x:Key="m_cavitationDesc">«Кавитация» - Способ очистки гидродинамической кавитацией заключается в следующем: в потоке жидкости с большой скоростью движется игла форсунки, за её различными выпуклыми частями образуется вакуум. Под давлением жидкости он мгновенно делится на огромное количество микроскопических пузырьков, которые схлопываются и энергией микровзрывов воздействуют на лаковые отложения, образующиеся внутри топливного канала форсунки и на самой игле.</v:String>
+    <v:String x:Key="m_calibrationDesc">«Калибровать контроллер» - Калибровка блока управления стендом производится при замене блока питания или отклонениях в замере сопротивления форсунок. Перед калибровкой необходимо измерить напряжение блока питания стенда и зафиксировать его в вольтах, например: 12.570</v:String>
+    <v:String x:Key="m_printReportDesc">«Создать отчёт» - Печать всех собранных данных при проверки форсунок.</v:String>
+    <v:String x:Key="m_errorsReportDesc">«Сообщить об ошибке» - Функция для отправки данных об ошибке в работе программы.</v:String>
+
+    <v:String x:Key="m_fourthHeader">Что нового?</v:String>
+
+    <v:String x:Key="m_firstNewsHeader">12.04.2023: Исправлена ошибка отсчёта таймера режимов работы.</v:String>
+    <v:String x:Key="m_firstNewsText">Исправлена ошибка отсчёта таймера режимов работы, которая фактически уменьшала вдвое время режима работы.</v:String>
+
+    <v:String x:Key="m_secondNewsHeader">22.04.2023: Исправлена ошибка поиска обновлений.</v:String>
+    <v:String x:Key="m_secondNewsText">Исправлена ошибка поиска обновлений, при которой поиск обновлений контроллера и программного обеспечения по сайту не производился.</v:String>
+
+    <v:String x:Key="m_thirdNewsHeader">22.05.2023: Добавлена возможность сохранения данных о форсунках для разных моделей автомобилей.</v:String>
+    <v:String x:Key="m_thirdNewsText">Добавлена возможность сохранения данных о форсунках. Для этого необходимо подобрать параметры(частота и скважность) кавитации форсунки. Затем нажать на кнопку "Сохранить", чтобы данные внеслись в таблицу. После этого нажать на кнопку под таблицей - "Сохранить значения". Заполнить поля, нажать "Добавить" и "Сохранить". Кнопка "Добавить" - запоминает данные текущей форсунки. Кнопка "Сохранить" - записыает данные о добавленных форсунках в базу.
+    </v:String>
+
+    <v:String x:Key="m_fourthNewsHeader">27.05.2023: Изменён алгоритм кавитации форсунок.</v:String>
+    <v:String x:Key="m_fourthNewsText">Была устранена ошибка, при которой нарушалась очередь кавитации форсунок или кавитация вообще не запускалась.</v:String>
+
+    <v:String x:Key="m_fifthNewsHeader">15.06.2023: Добавлено отображение версий программного обеспечения и прошивки.</v:String>
+    <v:String x:Key="m_fifthNewsText">Теперь снизу программы будет отображаться версия программного обеспечения и версия контроллера. Даже при переходе между вкладками версии будут на виду.</v:String>
+
+    <v:String x:Key="m_sixthNewsHeader">21.06.2023: Изменено отображение элементов пользовательского интерфейса на вкладке "Тестирование"</v:String>
+    <v:String x:Key="m_sixthNewsText">Слайдеры(ползунки) укомпонованы ближе друг к другу для более удобного пользования.</v:String>
+
+    <v:String x:Key="m_seventhNewsHeader">30.06.2023: Переработан алгоритм проверки и установки обновлений. Исправление обнаружения форсунок с сопротивлением ниже 1 Ома. Отображение последней ошибки</v:String>
+    <v:String x:Key="m_seventhNewsText">Изменён алгоритм проверки обновления. Теперь при перепрошивки окнтроллера программа параллельно не начнёт установку, а дождётся завершения прошивки.
+    Также исправлена ошибка, при которой программа вела себя не корректно с форсунками, сопротивление которых ниже 1 Ома.
+    И ещё один момент - снизу окна будет отображатсья последняя ошибка, которая у Вас появлялась. Убрать надпись можно повторной проверкой сопротивления.</v:String>
+
+    <v:String x:Key="m_eighthNewsHeader">05.07.2023: Внесены правки в пользовательском интерфейсе.</v:String>
+    <v:String x:Key="m_eighthNewsText">При запуске режима работы для лучшего понимания какой режим активен, текст кнопки становится зелёным и выделяется жирным шрифтом, остальные остаются без изменений.
+В отчёте добавлена возможность вбивать данные из программы, дата формируется автоматически.
+Также после окончания режима работы время не сбрасывается до минимального значения, а остаётся таким, каким оно было выставлено пользователем.</v:String>
+
+    <v:String x:Key="m_ninthNewsHeader">25.07.2023: Изменение минимального времени режима работы.</v:String>
+    <v:String x:Key="m_ninthNewsText">Уменьшена нижняя граница времени режима работы. Раньше минимальное значение было - 30 секунд, теперь - 15 секунд. 
+        Изменение было сделано всвязи с тем, что при высоких оборотак колбы переполняются жидкостью.</v:String>
+
+    <v:String x:Key="m_tenthNewsHeader">01.08.2023: Перенос кнопки "Создать отчёт" на главную вкладку.</v:String>
+    <v:String x:Key="m_tenthNewsText">Кнопка "Создать отчёт" была перенесена на главную вкладку на место кнопки "Обновления". Кнопка "Обновления" была перенесена на вкладку "Дополнительно".
+    В программе на вкладке "Тестирование" отображена кнопка для ультразвуковой очистки. Кнопка "Слив" перемещена к кнопке "Остановить".</v:String>
+
+    <v:String x:Key="m_eleventhNewsHeader">04.08.2023: Добавлено окно с новостями.</v:String>
+    <v:String x:Key="m_eleventhNewsText">Добалвено окно с новостями, чтобы Вы могли следить за изменениями и исправлением ошибок.
+    Есть возможность скрыть показ новостей: для поставьте галочку рядом с надписью "Больше не показывать". Включить показ можно на вкладке "Настройки".</v:String>
+    <!--#endregion-->
+    
+    <!--#region Other -->
+    <v:String x:Key="m_lightTheme">Ligth Theme</v:String>
+    <v:String x:Key="m_darkTheme">Dark Theme</v:String>
+    <v:String x:Key="m_yellowTheme">Yellow Theme</v:String>
+    <v:String x:Key="m_ruLang">Russian</v:String>
+    <v:String x:Key="m_enLang">English</v:String>
+    <v:String x:Key="m_kzLang">Kazakh</v:String>
+    <v:String x:Key="m_swVersion">Software version:</v:String>
+    <v:String x:Key="m_fwVersion">Firmware version:</v:String>
+    <!--#endregion-->
+
+    <!--#region pressingResult -->
+    <v:String x:Key="yesButton">Yes</v:String>
+    <v:String x:Key="noButton">No</v:String>
+    <v:String x:Key="okButton">OK</v:String>
+    <v:String x:Key="cancelButton">Cancel</v:String>
+    <!--#endregion-->
+</ResourceDictionary>

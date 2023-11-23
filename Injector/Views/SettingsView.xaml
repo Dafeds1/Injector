@@ -37,6 +37,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{DynamicResource m_selecrLanguageHeader}" Foreground="{DynamicResource textColor}" Margin="5,0,0,0"/>
         <Separator Grid.Row="1" MinHeight="2" Margin="5" />
@@ -56,14 +58,15 @@
         <TextBlock Grid.Row="14" Text="{DynamicResource m_savingPathHeader}" Foreground="{DynamicResource textColor}" Margin="5,0,0,0"/>
         <Separator Grid.Row="15" MinHeight="2" Margin="5"/>
         <StackPanel Grid.Row="16" Orientation="Horizontal">
-            <TextBox MinHeight="24" MinWidth="550" Margin="5,0,0,0"/>
-            <Button Content="{DynamicResource m_browseButton}" VerticalAlignment="Center" MinHeight="24" MinWidth="100" Margin="10,0,0,0" Style="{DynamicResource otherButtons}"/>
+            <TextBox MinHeight="24" MinWidth="550" Margin="5,0,0,0" Text="{Binding CurrentModelBase.LogsDirectory}" Style="{DynamicResource textBox}"/>
+            <Button Content="{DynamicResource m_browseButton}" Command="{Binding FilesBrowse}" VerticalAlignment="Center" MinHeight="24" MinWidth="100" Margin="10,0,0,0" Style="{DynamicResource otherButtons}"/>
         </StackPanel>
         <Separator Grid.Row="17" MinHeight="2" Margin="5"/>
         <TextBlock Grid.Row="18" Text="{DynamicResource m_directoryHeader}" Foreground="{DynamicResource textColor}" Margin="5,0,0,0"/>
         <Separator Grid.Row="19" MinHeight="2" Margin="5"/>
-        <Button Grid.Row="20" Content="{DynamicResource m_folderOpenButton}" MinHeight="22" MaxWidth="200" HorizontalAlignment="Left" MinWidth="150" Margin="5,0,0,0" Style="{DynamicResource otherButtons}"/>
-
+        <Button Grid.Row="20" Content="{DynamicResource m_folderOpenButton}" MinHeight="22" Command="{Binding OpenFolder}" MaxWidth="200" HorizontalAlignment="Left" MinWidth="150" Margin="5,0,0,0" Style="{DynamicResource otherButtons}"/>
+        <Label Grid.Row="21" Content="{DynamicResource m_swVersion}" Foreground="{DynamicResource textColor}"/>
+        <Label Grid.Row="22" Content="{DynamicResource m_fwVersion}" Foreground="{DynamicResource textColor}"/>
 
     </Grid>
 </UserControl>

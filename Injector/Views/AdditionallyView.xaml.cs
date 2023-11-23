@@ -12,5 +12,11 @@ namespace Injector.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Calibration calibration = new Calibration();
+            calibration.Show();
+        }
     }
 }

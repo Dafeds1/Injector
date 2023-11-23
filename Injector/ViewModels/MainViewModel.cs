@@ -48,7 +48,14 @@ namespace Injector.ViewModels
                     case 5:
                         CurrentChildView = new SettingsViewModel();
                         break;
+                    case 6:
+                        CurrentChildView = new SettingsViewModel();
+                        break;
+                    case 7:
+                        CurrentChildView = new SettingsViewModel();
+                        break;
                 }
+                CurrentModelBase.UpdateCaption(contentIndex);
             }
             catch (Exception ex)
             {
@@ -58,7 +65,15 @@ namespace Injector.ViewModels
         public MainViewModel()
         {
             CurrentChildView = new HomeViewModel();
-            SwitchContent = new DelegateCommand<object>(SwitchContentTo);    
+            SwitchContent = new DelegateCommand<object>(SwitchContentTo);
+            EventBus.onDisconnectController += Disconnect;
+            CurrentModelBase.Init();
+            CurrentModelBase.UpdateCaption(0);
+        }
+        private void Disconnect()
+        {
+            CurrentChildView = new HomeViewModel();
+            EventBus.onDisconnectController -= Disconnect;
         }
     }
 }

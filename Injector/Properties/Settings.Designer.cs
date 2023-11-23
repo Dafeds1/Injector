@@ -46,5 +46,65 @@ namespace Injector.Properties {
                 this["DefaultTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SN {
+            get {
+                return ((string)(this["SN"]));
+            }
+            set {
+                this["SN"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pathToLogs {
+            get {
+                return ((string)(this["pathToLogs"]));
+            }
+            set {
+                this["pathToLogs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowNews {
+            get {
+                return ((bool)(this["ShowNews"]));
+            }
+            set {
+                this["ShowNews"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LogsDirectory {
+            get {
+                return ((string)(this["LogsDirectory"]));
+            }
+            set {
+                this["LogsDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Subscribe {
+            get {
+                return ((bool)(this["Subscribe"]));
+            }
+            set {
+                this["Subscribe"] = value;
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@
             <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0">
-            <Button Content="{DynamicResource m_calibrationsButton}" Style="{DynamicResource otherButtons}" Margin="5,10,5,5"/>
+            <Button Content="{DynamicResource m_calibrationsButton}" Style="{DynamicResource otherButtons}" Margin="5,10,5,5" Click="Button_Click"/>
             <Button Content="{DynamicResource m_reportErrorButton}" Style="{DynamicResource otherButtons}" Margin="5,5,5,5"/>
             <Button Content="{DynamicResource m_updatesButton}" Style="{DynamicResource otherButtons}" Margin="5,5,5,10"/>
         </StackPanel>
@@ -25,7 +25,7 @@
             <CheckBox Content="{DynamicResource m_timeText}" VerticalAlignment="Center" Foreground="{DynamicResource textColor}" Margin="20,0,0,0"/>
             <Button Content="{DynamicResource m_saveButton}" VerticalAlignment="Center" MinHeight="22" MinWidth="100" Style="{DynamicResource otherButtons}" Margin="10,0,5,0" />
             <Button Content="{DynamicResource m_clearButton}" VerticalAlignment="Center" MinHeight="22" MinWidth="100" Style="{DynamicResource otherButtons}" Margin="5,0,5,0"/>
-            <TextBox VerticalAlignment="Center" VerticalContentAlignment="Center" MinWidth="250" MinHeight="32" Margin="10,0,0,0"/>
+            <TextBox VerticalAlignment="Center" VerticalContentAlignment="Center" MinWidth="250" MinHeight="32" Margin="10,0,0,0" Style="{DynamicResource textBox}"/>
         </StackPanel>
     </Grid>
 </UserControl>

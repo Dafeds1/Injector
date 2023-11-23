@@ -1,0 +1,29 @@
+﻿<Window x:Class="Injector.Views.LicenseActivation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Injector.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="LicenseActivation" MinWidth="330" MaxWidth="370" MaxHeight="260" MinHeight="220">
+    <Border CornerRadius="10" BorderThickness="2" Background="{DynamicResource primaryBackground}" BorderBrush="{DynamicResource borderColor}">
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10">
+            <Label Name="FIOText" Content="{DynamicResource m_FIOText}" Foreground="{DynamicResource textColor}" FontSize="14"/>
+            <TextBox x:Name="FIO" Style="{DynamicResource textBox}"/>
+            <Label Name="EmailText" Content="{DynamicResource m_emailText}" Foreground="{DynamicResource textColor}" FontSize="14"/>
+            <TextBox x:Name="Email" Style="{DynamicResource textBox}"/>
+            <Label Name="PhoneText" Content="{DynamicResource m_phoneText}" Foreground="{DynamicResource textColor}" FontSize="14"/>
+            <TextBox x:Name="Phone" Style="{DynamicResource textBox}"/>
+            <Label Name="SNSWText" Content="{DynamicResource m_snText}" Foreground="{DynamicResource textColor}" FontSize="14"/>
+            <TextBox x:Name="SerialNumber" Style="{DynamicResource textBox}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button x:Name="Register" Content="{DynamicResource m_registerLicenseButton}" Margin="5,0,10,0" Style="{DynamicResource otherButtons}" MinHeight="24"/>
+                <Button x:Name="CheckSN" Content="{DynamicResource m_checkLicenseButton}" Margin="10,0,5,0" Style="{DynamicResource otherButtons}" MinHeight="24" Click="CheckSN_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

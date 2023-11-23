@@ -14,7 +14,7 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="CanResizeWithGrip" Closing="Window_Closing">
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
@@ -39,7 +39,7 @@
         </DataTemplate>
     </Window.Resources>
 
-    <Border CornerRadius="10" BorderThickness="3" Background="{DynamicResource primaryBackground}" BorderBrush="{DynamicResource borderColor}">
+    <Border CornerRadius="10" BorderThickness="3" Background="{DynamicResource primaryBackground}" BorderBrush="{DynamicResource borderColor}" Margin="7">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
@@ -50,6 +50,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding CurrentModelBase.SelectedCaption}" FontSize="20" HorizontalAlignment="Left" Margin="20,0,0,0" Foreground="{DynamicResource textColor}" VerticalAlignment="Center"/>
             <StackPanel x:Name="ControlPanel" Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2" FlowDirection="RightToLeft" Margin="0,0,5,0" Background="Transparent" MouseLeftButtonDown="ControlPanel_MouseLeftButtonDown">
 
                 <Button x:Name="CloseApp" Margin="20,0,0,0" Style="{StaticResource menuButtons}" Click="CloseApp_Click">
@@ -72,63 +73,76 @@
             <Border Grid.Column="0" Grid.Row="1" Background="{DynamicResource secondaryBackground}" BorderBrush="{DynamicResource borderColor}" CornerRadius="10,10,10,10" BorderThickness="3" Margin="3,0,3,3">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="5,0,0,0">
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,5,5,0">
+                        <Image/>
+                        <TextBlock Text="INJEKT" FontSize="24" Foreground="{DynamicResource textColor}"/>
+                    </StackPanel>
+                        
+                    <ScrollViewer Grid.Row="1" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="5,0,0,0">
                         <!--Logo-->
-                        <StackPanel Orientation="Horizontal" Margin="10,5,5,0">
-                            <Image/>
-                            <TextBlock Text="INJEKT" FontSize="24" Foreground="{DynamicResource textColor}"/>
-                        </StackPanel>
 
-                        <RadioButton x:Name="Home" Command="{Binding SwitchContent}" CommandParameter="0" Style="{DynamicResource navigationButton}" IsChecked="True" Margin="0,10,0,5">
+                        <RadioButton x:Name="Home" Command="{Binding SwitchContent}" CommandParameter="0" Style="{DynamicResource navigationButton}" Margin="0,10,0,5" IsChecked="True">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/home.png"  Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[0]}"  Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_homeButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
                         <RadioButton x:Name="Test" Command="{Binding SwitchContent}" CommandParameter="1" Style="{DynamicResource navigationButton}">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/test.png" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[1]}" Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_testingButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
                         <RadioButton x:Name="Cavitation" Command="{Binding SwitchContent}" CommandParameter="2" Style="{DynamicResource navigationButton}">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/test.png" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[2]}" Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_cavitationButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
                         <RadioButton x:Name="More" Command="{Binding SwitchContent}" CommandParameter="3" Style="{DynamicResource navigationButton}">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/more.png" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[3]}" Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_additionallyButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
                         <RadioButton x:Name="Reference" Command="{Binding SwitchContent}" CommandParameter="4" Style="{DynamicResource navigationButton}">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/info.png" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[4]}" Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_referenceButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
-                        <RadioButton x:Name="Settings" Command="{Binding SwitchContent}" CommandParameter="5" Style="{DynamicResource navigationButton}">
+                        <RadioButton x:Name="DBInjectors" Command="{Binding SwitchContent}" CommandParameter="5" Style="{DynamicResource navigationButton}" IsEnabled="{Binding CurrentModelBase.IsSubscribeActive}">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/settings.png" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <Image Source="{Binding CurrentModelBase.Icons[5]}" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <TextBlock Text="{DynamicResource m_databaseButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton x:Name="AutoDiagnostic" Command="{Binding SwitchContent}" CommandParameter="6" Style="{DynamicResource navigationButton}" IsEnabled="{Binding CurrentModelBase.IsSubscribeActive}" IsChecked="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding CurrentModelBase.Icons[6]}" Width="32" Height="32" Margin="6,0,0,0"/>
+                                <TextBlock Text="{DynamicResource m_autoDiagnosticButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton x:Name="Settings" Command="{Binding SwitchContent}" CommandParameter="7" Style="{DynamicResource navigationButton}">
+                            <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding CurrentModelBase.Icons[7]}" Width="32" Height="32" Margin="6,0,0,0"/>
                                 <TextBlock Text="{DynamicResource m_settingsButton}" Margin="10,0,0,0" FontSize="20" FontFamily="Verdana"/>
                             </StackPanel>
                         </RadioButton>
 
                     </StackPanel>
-                    <StackPanel Grid.Row="1" Margin="0,0,0,5">
-                        <Label Content="{DynamicResource m_swVersion}" Foreground="{DynamicResource textColor}"/>
-                        <Label Content="{DynamicResource m_fwVersion}" Foreground="{DynamicResource textColor}"/>
-                    </StackPanel>
+                    </ScrollViewer>
                 </Grid>
             </Border>
 
@@ -136,7 +150,7 @@
                 <ContentControl Content="{Binding CurrentChildView}" Margin="3"/>
             </Border>
             <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                <Label Content="Ошибок нет" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Label Content="Ошибок нет" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{DynamicResource textColor}" FontSize="14" />
             </Border>
         </Grid>
     </Border>

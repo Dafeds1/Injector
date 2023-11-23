@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="900">
     <UserControl.DataContext>
-        <vm:ViewModelBase/>
+        <vm:HomeViewModel/>
     </UserControl.DataContext>
 
     <Grid>
@@ -45,7 +45,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical">
                 <Button Padding="2,2,2,2" Content="{DynamicResource m_openingTestButton}" Command="{Binding SendRequest}" CommandParameter="S3" Margin="0,5,0,0" Style="{DynamicResource otherButtons}" HorizontalAlignment="Left" MinWidth="140"/>
-                <Button Padding="2,2,2,2" Content="{DynamicResource m_createReportButton}" Margin="0,5,0,5" Style="{DynamicResource otherButtons}" HorizontalAlignment="Left" MinWidth="140"/>
+                <Button Padding="2,2,2,2" Content="{DynamicResource m_createReportButton}" Margin="0,5,0,5" Style="{DynamicResource otherButtons}" HorizontalAlignment="Left" MinWidth="140" Click="Button_Click"/>
             </StackPanel>
         </StackPanel>
         <!--<Viewbox VerticalAlignment="Center" MaxHeight="150" Margin="10,0,10,0" Grid.Column="1" Grid.Row="0">-->
@@ -88,10 +88,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ScottPlot:WpfPlot x:Name="Series" Grid.Column="0" MinWidth="250" MinHeight="250" MaxHeight="500" MaxWidth="600" Margin="4" MouseDoubleClick="Series_MouseDoubleClick" Loaded="Series_Loaded"/>
-            <ScottPlot:WpfPlot x:Name="Diagramm" Grid.Column="1" MinWidth="250" MinHeight="250" MaxHeight="400" MaxWidth="400" Margin="4" MouseDoubleClick="Diagramm_MouseDoubleClick" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-            <Grid Grid.Column="2" MaxHeight="400" MaxWidth="550" Margin="4">
+            <ScottPlot:WpfPlot x:Name="Diagramm" Grid.Column="1" MinWidth="250" MinHeight="250" MaxHeight="500" MaxWidth="600" Margin="4" MouseDoubleClick="Diagramm_MouseDoubleClick" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+            <Grid Grid.Column="2" MaxHeight="250" MaxWidth="550" Margin="4,4,4,4" VerticalAlignment="Top">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -141,6 +141,9 @@
                 <Label x:Name="Delta4" Grid.Column="4" Grid.Row="4" Content="{Binding CurrentModelBase.Delta[3]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" Background="{DynamicResource cellBackground}" Foreground="{DynamicResource textColor}"/>
                 <Label x:Name="Delta5" Grid.Column="5" Grid.Row="4" Content="{Binding CurrentModelBase.Delta[4]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" Background="{DynamicResource cellBackground}" Foreground="{DynamicResource textColor}"/>
                 <Label x:Name="Delta6" Grid.Column="6" Grid.Row="4" Content="{Binding CurrentModelBase.Delta[5]}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" Background="{DynamicResource cellBackground}" Foreground="{DynamicResource textColor}"/>
+            </Grid>
+            <Grid Grid.Column="2" VerticalAlignment="Bottom" MinHeight="250" MinWidth="250" Margin="5,0,5,5" MaxWidth="300" MaxHeight="300">
+                <Image Source="/Images/Nozzle.png"/>
             </Grid>
         </Grid>
     </Grid>

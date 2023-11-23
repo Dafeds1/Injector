@@ -138,6 +138,7 @@
     <Compile Include="AppLanguages.cs" />
     <Compile Include="AppTheme.cs" />
     <Compile Include="ConnectionToMC\Connection.cs" />
+    <Compile Include="ConnectionToMC\HIDInterface.cs" />
     <Compile Include="EventBus.cs" />
     <Compile Include="GlobalExceptionHandler.cs" />
     <Compile Include="Model\ModelBase.cs" />
@@ -150,11 +151,20 @@
     <Compile Include="Views\AdditionallyView.xaml.cs">
       <DependentUpon>AdditionallyView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Calibration.xaml.cs">
+      <DependentUpon>Calibration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CavitationView.xaml.cs">
       <DependentUpon>CavitationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LicenseActivation.xaml.cs">
+      <DependentUpon>LicenseActivation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ListNozzleCharacteristics.xaml.cs">
       <DependentUpon>ListNozzleCharacteristics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ReferenceView.xaml.cs">
       <DependentUpon>ReferenceView.xaml</DependentUpon>
@@ -177,16 +187,22 @@
     <Compile Include="Views\WhatsNew.xaml.cs">
       <DependentUpon>WhatsNew.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WebRequests\BuyLicense.cs" />
+    <Compile Include="WebRequests\CheckLicense.cs" />
+    <Compile Include="WebRequests\CheckSerialNumber.cs" />
+    <Compile Include="WebRequests\RegisterSerialNumber.cs" />
     <Compile Include="WndProcWindow.xaml.cs">
       <DependentUpon>WndProcWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Languages\lang.en_EN.xaml">
+    <Page Include="Languages\lang_en_EN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Languages\lang.ru_RU.xaml">
+    <Page Include="Languages\lang_ru_RU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="Themes\DarkTheme.xaml">
       <SubType>Designer</SubType>
@@ -204,7 +220,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Calibration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CavitationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LicenseActivation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +258,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\MessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ReferenceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -285,9 +313,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Page Include="Languages\lang.kz_KZ.xaml">
+    <Page Include="Languages\lang_kz_KZ.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -299,7 +328,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\test.png">
+    <Content Include="Assets\Lock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Reference.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\DBInjectors.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AutoDiagnostic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Additionally.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Testing.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Nozzle.png">
@@ -326,29 +376,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\minimize.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\chart.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\home.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\more.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\settings.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\info.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

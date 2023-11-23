@@ -58,5 +58,11 @@ namespace Injector.Views
             //Series.Reset();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageWindow message = new MessageWindow("Ты пидор?", "Отвечай честно", MessageBoxButton.YesNo);
+            message.ShowDialog();
+        }
+
     }
 }

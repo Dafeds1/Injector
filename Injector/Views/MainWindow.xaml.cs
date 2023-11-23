@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Injector.Views;
+using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -18,9 +20,19 @@ namespace Injector
         {
             try
             {
-                InitializeComponent();
                 AppLanguages.LoadDefaultLanguage();
                 AppTheme.LoadDefaltTheme();
+                //if (Properties.Settings.Default.SN == null || Properties.Settings.Default.SN.Length < 1)
+                //{
+                //    LicenseActivation license = new LicenseActivation();
+                //    license.ShowDialog();
+                //    if (license.DialogResult == false)
+                //    {
+                //        Application.Current.Shutdown();
+                //    }
+                //}
+                InitializeComponent();
+                
             }
             catch (Exception ex)
             {
@@ -55,5 +67,9 @@ namespace Injector
             SendMessage(helper.Handle, 161, 2, 0);
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
+        }
     }
 }

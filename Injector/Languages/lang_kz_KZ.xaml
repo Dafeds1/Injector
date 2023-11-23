@@ -117,6 +117,7 @@
       Также замкните выход первой форсунки(обозначена чёрной термоусадкой или маркером) и нажмите на кнопку "Калибровать" (83)</v:String>
   <v:String x:Key="m_calibrateButton">Калибровать (84)</v:String>
   <!--#endregion-->
+    
   <!--#region News -->
     <v:String x:Key="m_firstHeader">Окна программы (85)</v:String>
     <v:String x:Key="m_windowsDesc">В программе есть 4 окна: главное, окно калибровки, окно обновления программы и прошивки, окно отчёта работы с форсунками (86)</v:String>
@@ -216,4 +217,11 @@
   <v:String x:Key="m_swVersion">Версия ПО (144)</v:String>
   <v:String x:Key="m_fwVersion">Версия прошивки (145)</v:String>
   <!--#endregion-->
+
+    <!--#region pressingResult -->
+    <v:String x:Key="yesButton">Да (146)</v:String>
+    <v:String x:Key="noButton">Нет (147)</v:String>
+    <v:String x:Key="okButton">Ок (148)</v:String>
+    <v:String x:Key="cancelButton">Отмена (149)</v:String>
+    <!--#endregion-->
 </ResourceDictionary>

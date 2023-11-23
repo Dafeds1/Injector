@@ -29,13 +29,13 @@ namespace Injector
             
             switch(index){
                 case 0:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang.ru_RU.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang_ru_RU.xaml", UriKind.Relative) });
                     break;
                 case 1:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang.en_EN.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang_en_EN.xaml", UriKind.Relative) });
                     break;
                 case 2:
-                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang.kz_KZ.xaml", UriKind.Relative) });
+                    Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Languages/lang_kz_KZ.xaml", UriKind.Relative) });
                     break;
                 }
             Application.Current.Resources.MergedDictionaries.Add(otherResource);
@@ -46,7 +46,6 @@ namespace Injector
 
         public static void LoadDefaultLanguage()
         {
-            var lang = Properties.Settings.Default.DefaultLanguage;
             //MessageBox.Show(lang.Name + '\n' + lang.NativeName + '\n' + lang.Parent + '\n' + lang.DisplayName);
             for (int i = 0; i < m_languages.Count; i++)
             {
@@ -70,13 +69,13 @@ namespace Injector
             switch (GetCurrentLanguage().Name)
             {
                 case "ru-RU":
-                    findedUri = "Languages/lang.ru_RU.xaml";
+                    findedUri = "Languages/lang_ru_RU.xaml";
                     break;
                 case "en-US":
-                    findedUri = "Languages/lang.en_EN.xaml";
+                    findedUri = "Languages/lang_en_EN.xaml";
                     break;
                 case "kk-KZ":
-                    findedUri = "Languages/lang.kz_KZ.xaml";
+                    findedUri = "Languages/lang_kz_KZ.xaml";
                     break;
             }
             return findedUri;
